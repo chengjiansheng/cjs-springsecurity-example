@@ -2,14 +2,12 @@ package com.cjs.example.entity;
 
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.boot.jackson.JsonComponent;
 
 import java.io.Serializable;
 import java.util.List;
 
 @Data
 @ToString
-@JsonComponent
 public class SysUser implements Serializable {
 
     private Long id;

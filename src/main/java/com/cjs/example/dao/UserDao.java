@@ -36,8 +36,8 @@ public class UserDao {
         p4.setName("查看图书");
         p4.setUrl("/book/detail");
 
-        admin.setPermissionList(Arrays.asList(p1, p2));
-        developer.setPermissionList(Arrays.asList(p1, p2, p3, p4));
+        admin.setPermissionList(Arrays.asList(p1, p2, p3, p4));
+        developer.setPermissionList(Arrays.asList(p1, p2));
 
     }
 

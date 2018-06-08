@@ -44,13 +44,13 @@ public class RedisConfig extends CachingConfigurerSupport {
         return redisTemplate;
     }
 
-    @Bean
-    public RedisCacheManager redisCacheManager(RedisTemplate redisTemplate) {
-        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisTemplate.getConnectionFactory());
-        RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
-                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(redisTemplate.getValueSerializer()));
-        return new RedisCacheManager(redisCacheWriter, redisCacheConfiguration);
-    }
+//    @Bean
+//    public RedisCacheManager redisCacheManager(RedisTemplate redisTemplate) {
+//        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisTemplate.getConnectionFactory());
+//        RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
+//                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(redisTemplate.getValueSerializer()));
+//        return new RedisCacheManager(redisCacheWriter, redisCacheConfiguration);
+//    }
 
     /**
      * 二者选其一即可

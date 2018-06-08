@@ -3,6 +3,7 @@ package com.cjs.example.controller;
 import com.cjs.example.entity.SysUser;
 import com.cjs.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +19,9 @@ public class UserController {
     /**
      * 个人中心
      */
+    @PreAuthorize("hasAuthority('UserIndex')")
     @GetMapping("/index")
     public String index() {
-
         return "user/index";
     }
 
